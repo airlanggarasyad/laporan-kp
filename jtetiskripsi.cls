@@ -249,7 +249,7 @@
       \begin{singlespace}
       \fontsize{14pt}{16pt}\selectfont\MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak
       \vspace{1.5cm}
-      \MakeUppercase{\normalfont\bfseries Skripsi}\\
+      \MakeUppercase{\normalfont\bfseries Laporan Kerja Praktik}\\
       \vspace{1.0cm}
        \vfill
        \includegraphics[width=0.5\textwidth]{gambar/logougm.png}
@@ -260,7 +260,7 @@
         \MakeUppercase{\normalfont\bfseries \@idnum}}\\
        \vspace{1.5cm}
        {\normalfont 
-         \MakeUppercase{\normalfont\bfseries Jurusan \@dept}\\
+         \MakeUppercase{\normalfont\bfseries Departemen \@dept}\\
          \MakeUppercase{\normalfont\bfseries\@faculty} \MakeUppercase{\normalfont\bfseries\@university}\\
          \MakeUppercase{\normalfont\bfseries\@city}\\
          \vspace{0.5cm}
@@ -278,11 +278,11 @@
   \begin{doublespace}
         \MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak
     \vspace{1.0cm}
-    \MakeUppercase{\normalfont\bfseries\expandafter{Skripsi}}\\
+    \MakeUppercase{\normalfont\bfseries\expandafter{Laporan Kerja Praktik}}\\
     \vspace{1.0cm}
     Diajukan Sebagai Salah Satu Syarat untuk Memperoleh\\
     Gelar Sarjana Teknik Program S-1\\
-    Pada Jurusan \@dept \ \@faculty \\
+    Pada Departemen \@dept \ \@faculty \\
     \@university
 
     \vspace{1.0cm}
@@ -298,11 +298,11 @@
 
     \begin{singlespace}
     \begin{tabular}{ccc}
-      Dosen Pembimbing I & & Dosen Pembimbing II \\
-      \vspace{1cm} & \vspace{1cm} & \vspace{1cm}\\
-      \textbf{\underline{\@firstsupervisor}}& &
-      \textbf{\underline{\@secondsupervisor}} \\
-      \bfseries NIP. \@firstnip & & \bfseries NIP. \@secondnip    
+      Dosen Pembimbing Kerja Praktik\\
+      \vspace{1cm} \vspace{1cm} \vspace{1cm}\\
+      \textbf{\underline{\@firstsupervisor}}
+      \\
+      \bfseries NIP. \@firstnip    
     \end{tabular}
     \end{singlespace}
 
