@@ -12,13 +12,29 @@
 Objek MQTT memiliki empat buah \textit{method}, yaitu on\_connect yang akan dijalankan ketika objek MQTT telah berhasil terkoneksi dengan broker MQTT, on\_subscribe yang akan dijalankan ketika objek MQTT diatur sebagai subscriber dan berhasil berlangganan ke topik yang telah ditentukan, on\_publish yang akan dijalankan ketika objek MQTT diatur sebagai publisher dan akan mencetak pesan yang berhasil dikirimkan ke satu topik pada konsol, dan publish untuk mengirimkan pesan ke topik yang telah ditentukan.
 
 \section{\textit{Class} DatabaseWrapper}
-Habeo perfecto in sea. Ea deleniti gloriatur pri, paulo mediocrem incorrupte sea ei. Ad mollis scripta per. Incorrupte sadipscing ne mel. Mel ex nonumy malorum epicurei.
+\textit{Class} DatabaseWrapper digunakan untuk membuat objek yang akan menangani basis data pada Amanda. Objek DatabaseWrapper memiliki tujuh belas \textit{method}.
+
+Ketika objek DatabaseWrapper dibuat maka ia akan memanggil \textit{method} connect. \textit{Method} connect akan melakukan inisiasi koneksi ke basis data Amanda di \textit{localhost}. Setelah koneksi ke basis data berhasil dilakukan maka atribut status akan diatur menjadi \textit{connected}.
 
 \section{\textit{Class} Growlight}
 Habeo perfecto in sea. Ea deleniti gloriatur pri, paulo mediocrem incorrupte sea ei. Ad mollis scripta per. Incorrupte sadipscing ne mel. Mel ex nonumy malorum epicurei.
 
 \section{\textit{Class} Arduino}
-Habeo perfecto in sea. Ea deleniti gloriatur pri, paulo mediocrem incorrupte sea ei. Ad mollis scripta per. Incorrupte sadipscing ne mel. Mel ex nonumy malorum epicurei.
+\textit{Class} Arduino digunakan untuk membuat objek yang menangani perangkat Arduino yang terkoneksi melalui koneksi serial. Objek Arduino memiliki lima buah \textit{public method}, satu buah \textit{protected method}, dan satu buah \textit{private method}.
+
+Ketika objek Arduino dibuat maka akan diinisiasi koneksi ke Arduino ke porta serial yang digunakan. Jika berhasil terkoneksi maka atribut status akan diperbaharui menjadi \textit{connected}.
+
+\subsection{Pengambilan Data yang Dibaca oleh Sensor}
+Untuk mengambil data pada sensor maka pengguna harus mengirimkan \textit{string} "poll" ke serial Arduino. Setelah menerima perintah poll maka Arduino akan mengirimkan data yang telah dibaca pada sensor. Karena data yang dikirimkan masih dalam bentuk \textit{string} maka harus dilakukan \textit{parsing} terlebih dahulu. \textit{Parsing} dilakukan dengan cara mencari angka pada \textit{string} yang telah dikirimkan oleh Arduino dan kemudian angka tersebut akan di-\textit{assign} ke variabel yang sesuai.
+
+\subsection{Kalibrasi Sensor pH}
+Proses kalibrasi pada sensor pH dilakukan dalam empat tahap. Tahap pertama adalah membersihkan kalibrasi. Tahap kedua melakukan kalibrasi ke pH 7. Tahap ketiga melakukan kalibrasi ke pH 4. Terakhir, dilakukan kalibrasi ke pH 10. Setiap tahapan dilakukan ketika pembacaan sensor pH sama sebanyak lima kali berturut-turut.
+
+\subsection{Kalibrasi Sensor EC}
+Proses kalibrasi pada sensor pH dilakukan dalam empat tahap. Tahap pertama adalah membersihkan kalibrasi. Tahap kedua melakukan kalibrasi ke pH 7. Tahap ketiga melakukan kalibrasi ke pH 4. Terakhir, dilakukan kalibrasi ke pH 10. Setiap tahapan dilakukan ketika pembacaan sensor pH sama sebanyak lima kali berturut-turut.
+
+\subsection{Kalibrasi Sensor DO}
+Proses kalibrasi pada sensor pH dilakukan dalam empat tahap. Tahap pertama adalah membersihkan kalibrasi. Tahap kedua melakukan kalibrasi ke pH 7. Tahap ketiga melakukan kalibrasi ke pH 4. Terakhir, dilakukan kalibrasi ke pH 10. Setiap tahapan dilakukan ketika pembacaan sensor pH sama sebanyak lima kali berturut-turut.
 			
 % Baris ini digunakan untuk membantu dalam melakukan sitasi.
 % Karena diapit dengan comment, maka baris ini akan diabaikan
